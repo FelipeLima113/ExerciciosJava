@@ -1,27 +1,3 @@
-mport java.util.Scanner;
-
-public class App {
-
-// Lista de exercícios de Java básico
-//
-//
-// 1. Escreva um programa que, com base em uma temperatura em graus celsius, a converta e exiba
-// em Kelvin (K), Réaumur (Re), Rankine (Ra) e Fahrenheit (F), seguindo as fórmulas: F = C * 1.8 + 32;
-// K = C + 273.15; Re = C * 0.8; Ra = C * 1.8 + 32 + 459.67
-//
-// 2. Fazer um programa que imprima a média aritmética dos números 8, 9 e 7.
-// A média dos números 4, 5 e 6. A soma das duas médias. A média das médias.
-//
-// 3. Desenvolva um algoritmo em Java que leia um número inteiro e imprima o seu antecessor e
-// seu sucessor.
-//
-// 4. Tem-se um conjunto de dados contendo a altura e o sexo (masculino, feminino)
-// de 10 pessoas. Fazer um algoritmo que calcule e escreva:
-// a. a maior e a menor altura do grupo;
-// b. média de altura dos homens;
-// c. o número de mulheres.
-
-
 
 public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
@@ -72,16 +48,51 @@ System.out.println("O número digitado foi " + numeroDigitado + " portanto o seu
 " e seu sucessor é " + (numeroDigitado+1));
 
 //Problema 4
-Scanner scanner = new Scanner(System.in);
+import java.util.Scanner;
 
-for (int i=0; i < 10; i++) {//
-System.out.println("Digite a altura da pessoa: ");
-double altura = scanner.nextDouble();
+public class AlturaGrupo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double maiorAltura = Double.MIN_VALUE;
+        double menorAltura = Double.MAX_VALUE;
+        double somaAlturaHomens = 0;
+        int numMulheres = 0;
 
-System.out.println("Digite o sexo da pessoa (1-Feminino, 2- Masculino) ");
-int sexo = scanner.nextInt();
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Digite a altura da pessoa: ");
+            double altura = scanner.nextDouble();
 
-if(sexo == 1) {
+            System.out.println("Digite o sexo da pessoa (1-Feminino, 2-Masculino): ");
+            int sexo = scanner.nextInt();
+
+            if (sexo == 1) {
+                numMulheres++;
+            } else if (sexo == 2) {
+                somaAlturaHomens += altura;
+            } else {
+                System.out.println("Opção inválida. Tente novamente.");
+                i--; // Decrementa o contador para repetir a entrada desta pessoa.
+                continue;
+            }
+
+            if (altura > maiorAltura) {
+                maiorAltura = altura;
+            }
+
+            if (altura < menorAltura) {
+                menorAltura = altura;
+            }
+        }
+
+        double mediaAlturaHomens = somaAlturaHomens / (10 - numMulheres);
+
+        System.out.println("Maior altura do grupo: " + maiorAltura);
+        System.out.println("Menor altura do grupo: " + menorAltura);
+        System.out.println("Média de altura dos homens: " + mediaAlturaHomens);
+        System.out.println("Número de mulheres: " + numMulheres);
+    }
+}
+
 
 
 
@@ -108,7 +119,7 @@ public class Main {
 
         double cotacao = 5.10;
         Scanner valordigitado = new Scanner(System.in);
-        System.out.println("Digite um valor em dolar");
+        System.out.println("Digar");
         double dolar = valordigitado.nextDouble();
         double v_convertido = dolar*cotacao;
         System.out.println("O valor da conversão é: "+v_convertido);
@@ -140,6 +151,10 @@ public class exrercicio7 {
 }
 
 
+// Problema 8
+
+
+
 
 //Problema 9
 
@@ -159,4 +174,59 @@ public class exercicio9 {
 
     }
 }
+
+// Problema 10
+
+import java.util.Scanner;
+
+public class Relacionamentos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número inteiro: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int numero2 = scanner.nextInt();
+
+        System.out.println("Os números são " + (numero1 == numero2 ? "iguais." : "diferentes."));
+        System.out.println("O primeiro número é " + (numero1 > numero2 ? "maior" : "menor") + " que o segundo.");
+        System.out.println("O primeiro número é " + (numero1 >= numero2 ? "maior ou igual" : "menor") + " ao segundo.");
+        System.out.println("O primeiro número é " + (numero1 <= numero2 ? "menor ou igual" : "maior") + " ao segundo.");
+
+        scanner.close();
+    }
+}
+
+
+// Problema 11
+
+import java.util.Scanner;
+
+public class DiferencaMaiorMenor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        double numero1 = scanner.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double numero2 = scanner.nextDouble();
+
+        double diferenca;
+
+        if (numero1 > numero2) {
+            diferenca = numero1 - numero2;
+        } else {
+            diferenca = numero2 - numero1;
+        }
+
+        System.out.println("A diferença entre o maior e o menor número é: " + diferenca);
+
+        scanner.close();
+    }
+}
+
+
+// Problema 12
 
