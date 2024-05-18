@@ -1,0 +1,162 @@
+mport java.util.Scanner;
+
+public class App {
+
+// Lista de exercícios de Java básico
+//
+//
+// 1. Escreva um programa que, com base em uma temperatura em graus celsius, a converta e exiba
+// em Kelvin (K), Réaumur (Re), Rankine (Ra) e Fahrenheit (F), seguindo as fórmulas: F = C * 1.8 + 32;
+// K = C + 273.15; Re = C * 0.8; Ra = C * 1.8 + 32 + 459.67
+//
+// 2. Fazer um programa que imprima a média aritmética dos números 8, 9 e 7.
+// A média dos números 4, 5 e 6. A soma das duas médias. A média das médias.
+//
+// 3. Desenvolva um algoritmo em Java que leia um número inteiro e imprima o seu antecessor e
+// seu sucessor.
+//
+// 4. Tem-se um conjunto de dados contendo a altura e o sexo (masculino, feminino)
+// de 10 pessoas. Fazer um algoritmo que calcule e escreva:
+// a. a maior e a menor altura do grupo;
+// b. média de altura dos homens;
+// c. o número de mulheres.
+
+
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+//Problema 1
+
+System.out.println("Digite a temperatura em Celsius: ");
+double C = sc.nextDouble();
+double F = C * 1.8 + 32;
+double K = C + 273.15;
+double Re = C * 0.8;
+double Ra = C * 1.8 + 32 + 459.67;
+
+System.out.println("Problema 1");
+System.out.println("A temperatura em C (Celsius) é: " + C);
+System.out.println("A temperatura em F (Fahrenheit) é: " + F);
+System.out.println("A temperatura em K (Kelvin) é: " + K);
+System.out.println("A temperatura em Re (Réaumur) é: " + Re);
+System.out.println("A temperatura em Ra (Rankine) é: " + Ra + "\n");
+
+
+//Problema 2
+
+int numero1 = 8;
+int numero2 = 9;
+int numero3 = 7;
+
+int numero4 = 4;
+int numero5 = 5;
+int numero6 = 6;
+
+double media1 = (numero1+numero2+numero3)/3;
+double media2 = (numero4+numero5+numero6)/3;
+
+System.out.println("Problema 2");
+System.out.println("A média aritmética de " + numero1 + " " + numero2 + " " + numero3 + " é " + media1);
+System.out.println("A média aritmética de " + numero4 + " " + numero5 + " " + numero6 + " é " + media2);
+System.out.println("A soma das médias " + (media1 + media2));
+System.out.println("A média das médias " + ((media1 + media2)/2) + "\n");
+
+//Problema 3
+System.out.println("Problema 3");
+System.out.println("Digite um número para descobrir o seu antecessor e o seu sucessor: ");
+
+int numeroDigitado = sc.nextInt();
+
+System.out.println("O número digitado foi " + numeroDigitado + " portanto o seu antecessor é " + (numeroDigitado-1) +
+" e seu sucessor é " + (numeroDigitado+1));
+
+//Problema 4
+Scanner scanner = new Scanner(System.in);
+
+for (int i=0; i < 10; i++) {//
+System.out.println("Digite a altura da pessoa: ");
+double altura = scanner.nextDouble();
+
+System.out.println("Digite o sexo da pessoa (1-Feminino, 2- Masculino) ");
+int sexo = scanner.nextInt();
+
+if(sexo == 1) {
+
+
+
+// Problema 5
+
+import java.util.Scanner;
+
+public static void main(string[] args) {
+scanner valordigitado = new scanner(system.in);
+System.out.println("Digite o valor minimo");
+int valorminimo = valordigitado.nextint();
+System.out.printlnigite o valor maximo");
+int valormaximo = valordigitado.nextint();
+int estoquemedio = (valorminimo+valormaximo)/2;
+System.out.println("Valor do estoque medio e"+estoquemedio);
+}
+
+
+//Problema 6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        double cotacao = 5.10;
+        Scanner valordigitado = new Scanner(System.in);
+        System.out.println("Digite um valor em dolar");
+        double dolar = valordigitado.nextDouble();
+        double v_convertido = dolar*cotacao;
+        System.out.println("O valor da conversão é: "+v_convertido);
+
+    }
+}
+
+
+//Problema 7
+
+import java.util.Scanner;
+
+public class exrercicio7 {
+    public static void main(String[] args) {
+        Scanner valordigitado = new Scanner(System.in);
+        System.out.println("Digite o tempo gasto na viagem(Hora): ");
+        double t_gasto = valordigitado.nextDouble();
+        System.out.println("Digite a velocidade média do móvel(Km/h): ");
+        double v_media = valordigitado.nextDouble();
+        double distancia = t_gasto * v_media;
+        double litros_usados = distancia / 12;
+        System.out.println("O valor da velocidade média é: "+v_media);
+        System.out.println("O tempo gasto na viagem é: "+t_gasto);
+        System.out.println("A distância percorrida foi: "+distancia);
+        System.out.println("O total de litros gastos na viagem: "+litros_usados);
+
+
+    }
+}
+
+
+
+//Problema 9
+
+
+import java.util.Scanner;
+
+public class exercicio9 {
+    public static void main(String[] args) {
+        Scanner valordigitado = new Scanner(System.in);
+        System.out.println("Digite a idade");
+        int idade = valordigitado.nextInt();
+        int meses = idade*12;
+        int dias = idade*365;
+        System.out.println("A idade dessa pessoa em anos é: "+idade);
+        System.out.println("A idade dessa pessoa em meses é: "+meses);
+        System.out.println("A idade dessa pessoa em dias é: "+ dias);
+
+    }
+}
+
