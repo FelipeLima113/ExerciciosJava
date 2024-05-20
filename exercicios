@@ -119,7 +119,7 @@ public class Main {
 
         double cotacao = 5.10;
         Scanner valordigitado = new Scanner(System.in);
-        System.out.println("Digar");
+        System.out.println("Digite um Valor em Dólar");
         double dolar = valordigitado.nextDouble();
         double v_convertido = dolar*cotacao;
         System.out.println("O valor da conversão é: "+v_convertido);
@@ -153,7 +153,19 @@ public class exrercicio7 {
 
 // Problema 8
 
+import java.util.Scanner;
 
+public class exercicio8 {
+    public static void main(String[] args) {
+        Scanner valordigitado = new Scanner(System.in);
+        double volume = 3.14159;
+        System.out.println("Digite o Valor do Raio de Uma Lata de Óleo");
+        double raio = valordigitado.nextDouble();
+        System.out.println("Digite a Altura da Lata de Óleo");
+        double altura = valordigitado.nextDouble();
+        System.out.println("O Resultado é:"+volume*raio*altura);
+    }
+}
 
 
 //Problema 9
@@ -176,27 +188,27 @@ public class exercicio9 {
 }
 
 // Problema 10
+    import java.util.Scanner;
 
-import java.util.Scanner;
-
-public class Relacionamentos {
+public class e10 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner valordigitado = new Scanner(System.in);
+        System.out.println("Digite o Primeiro Número Inteiro");
+        int primeiro = valordigitado.nextInt();
+        System.out.println("Digite o Segundo Número Inteiro");
+        int segundo = valordigitado.nextInt();
+        if (primeiro>segundo) {
+            System.out.println("O primeiro número é maior que o segundo");
 
-        System.out.print("Digite o primeiro número inteiro: ");
-        int numero1 = scanner.nextInt();
+        } else if (primeiro==segundo) {
+            System.out.println("O primeiro número é igual o segundo");
+        }
 
-        System.out.print("Digite o segundo número inteiro: ");
-        int numero2 = scanner.nextInt();
-
-        System.out.println("Os números são " + (numero1 == numero2 ? "iguais." : "diferentes."));
-        System.out.println("O primeiro número é " + (numero1 > numero2 ? "maior" : "menor") + " que o segundo.");
-        System.out.println("O primeiro número é " + (numero1 >= numero2 ? "maior ou igual" : "menor") + " ao segundo.");
-        System.out.println("O primeiro número é " + (numero1 <= numero2 ? "menor ou igual" : "maior") + " ao segundo.");
-
-        scanner.close();
+        else {
+            System.out.println("O primeiro número é menor que o segundo");
+        }
     }
-}
+    }
 
 
 // Problema 11
