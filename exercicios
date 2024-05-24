@@ -163,7 +163,7 @@ public class exercicio8 {
         double raio = valordigitado.nextDouble();
         System.out.println("Digite a Altura da Lata de Óleo");
         double altura = valordigitado.nextDouble();
-        System.out.println("O Resultado é:"+volume*raio*altura);
+        System.out.println("O Resultado é:"+volume*raio*raio*altura);
     }
 }
 
@@ -198,8 +198,8 @@ public class e10 {
         System.out.println("Digite o Segundo Número Inteiro");
         int segundo = valordigitado.nextInt();
         if (primeiro>segundo) {
-            System.out.println("O primeiro número é maior que o segundo");
-
+            System.out.println("O primeiro número é maior que o segundo");     //   // fazer o exercício usando todos os relacionamentos: maior, menor, igual. nao igual, maior ou igual, menor ou igual
+ 
         } else if (primeiro==segundo) {
             System.out.println("O primeiro número é igual o segundo");
         }
